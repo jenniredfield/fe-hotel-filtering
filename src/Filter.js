@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import hotels from './hotels'
 
 class Filter extends Component {
 
@@ -18,7 +18,7 @@ class Filter extends Component {
 
     render () {
 
-        let hotels = this.props.hotels.slice() //copy of props
+        // let hotels = this.props.hotels.slice() //copy of props
 
         let facilities = [];
 
@@ -33,7 +33,7 @@ class Filter extends Component {
 
         return (
             <div className="filterWrapper">
-                <button onClick={this.props.showAll}>ALL</button>
+                <button onClick={this.props.showAll}>SHOW ALL</button>
                 <div className="checkBoxDiv">
                         <ul>
                         {facilities.map((fac,i)=>{
