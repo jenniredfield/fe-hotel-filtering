@@ -41,9 +41,14 @@ class App extends Component {
           hotels: ascHotels
         })
     }
-
 }
 
+  showAll = () => {
+
+    this.setState({
+      hotels : hotels,
+    })
+  }
 
   render() {
 
@@ -52,7 +57,7 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Hotel Filtering</h1>
         </header>
-        <Filter hotels={this.state.hotels} filterHotels={this.filterHotels} sortByAscOrDesc={this.sortByAscOrDesc}/>
+        <Filter hotels={this.state.hotels} filterHotels={this.filterHotels} sortByAscOrDesc={this.sortByAscOrDesc} showAll={this.showAll}/>
         <HotelsComp hotels={this.state.hotels}/>
       </div>  
     );

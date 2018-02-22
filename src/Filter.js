@@ -33,7 +33,7 @@ class Filter extends Component {
 
         return (
             <div className="filterWrapper">
-                <button>ALL</button>
+                <button onClick={this.props.showAll}>ALL</button>
                 <div className="checkBoxDiv">
                         <ul>
                         {facilities.map((fac,i)=>{
