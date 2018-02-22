@@ -7,7 +7,7 @@ class Filter extends Component {
     //need to add select dropdown or checkbox for facilities filter
 
     handleChange = (event) => {
-            console.log(event.target.value)
+         
             this.props.filterHotels(event.target.value);
     }
 
