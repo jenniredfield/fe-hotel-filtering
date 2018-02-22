@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import hotels from './hotels'
+import hotels from './hotels';
+import Filter from './Filter.js';
+import HotelsComp from './HotelsComp.js';
 import './App.css';
 
 class App extends Component {
@@ -8,6 +10,9 @@ class App extends Component {
     hotels : hotels,
   }
 
+  //Need to add a filter component
+  //Need to add a hotel display component
+
   render() {
     console.log(hotels)
     return (
@@ -15,10 +20,9 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Hotel Filtering</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+        <Filter hotels={this.state.hotels}/>
+        <HotelsComp/>
+      </div>  
     );
   }
 }
