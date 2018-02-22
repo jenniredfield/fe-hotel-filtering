@@ -21,7 +21,7 @@ class App extends Component {
           <h1 className="App-title">Hotel Filtering</h1>
         </header>
         <Filter hotels={this.state.hotels}/>
-        <HotelsComp/>
+        <HotelsComp hotels={this.state.hotels}/>
       </div>  
     );
   }
