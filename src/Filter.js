@@ -3,8 +3,9 @@ import hotels from './hotels'
 
 class Filter extends Component {
 
-
-    //need to add select dropdown or checkbox for facilities filter
+    state = {
+        checked : false,
+    }
 
     handleChange = (event) => {
          
@@ -15,6 +16,11 @@ class Filter extends Component {
       
         if(event.target.value === "") return;
         this.props.sortByAscOrDesc(event.target.value);
+    }
+
+    handleButton = () => {
+
+        this.props.showAll();
     }
 
     render () {
@@ -34,12 +40,12 @@ class Filter extends Component {
 
         return (
             <div className="filterWrapper">
-                <button onClick={this.props.showAll}>SHOW ALL</button>
+                <button onClick={this.handleButton}>SHOW ALL</button>
                 <div className="checkBoxDiv">
                         <ul>
                         {facilities.map((fac,i)=>{
                             return (
-                                <li key={i}><input value={fac} type="checkbox" onChange={this.handleChange}/>{fac[0].toUpperCase() + fac.slice(1)}</li>
+                                <li key={i}><input value={fac} type="checkbox" onChange={this.handleChange} />{fac[0].toUpperCase() + fac.slice(1)}</li>
                             )
                         })}
                         </ul>

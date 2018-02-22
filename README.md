@@ -3,6 +3,13 @@
 
 To run this project locally, make sure you have node installed. You can download it [here](https://nodejs.org/en/download/)
 
+** THINGS TO IMPROVE ***
+
+At the start of the project, I was not so familiar with Enzyme and testing React. Would like to add more meaningful tests in the future.
+
+Filter function could be better
+
+
 
 
 To copy this project, navigate to your folder of choice on terminal and type
@@ -48,3 +55,24 @@ To run tests
 npm test
 ```
 
+Note to self - to get Enzyme  working:
+
+```
+
+npm install jest
+npm install enzyme
+npm install enzyme-adapter-react-16
+npm install jest-cli  -> this fixed a problem
+
+Have a src/setupTest.js  file with
+
+import Enzyme, { shallow, render, mount } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+
+Enzyme.configure({ adapter: new Adapter() });
+
+console.error = message => {
+throw new Error(message);
+};
+
+```
