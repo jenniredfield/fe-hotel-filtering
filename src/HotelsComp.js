@@ -14,7 +14,9 @@ class HotelsComp extends Component {
                     return (
 
                         <div className="hotelDiv" key={i}>
-                                <div className="imageDiv"></div>
+                                <div className="imageDiv">
+                                    <img src={hotel.url} alt="hotel" style={{width: "200px"}}/>
+                                </div>
                                 <div className="hotelDesc">
                                     <ul>
                                         <li>{hotel.Name}</li>

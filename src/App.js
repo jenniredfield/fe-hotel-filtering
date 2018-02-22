@@ -10,17 +10,27 @@ class App extends Component {
     hotels : hotels,
   }
 
-  //Need to add a filter component
-  //Need to add a hotel display component
+  filterHotels = (facility) => {
+
+    let filteredHotels = hotels.filter(hotel => {
+        return hotel.Facilities.includes(facility);
+    })
+
+    this.setState({
+        hotels: filteredHotels
+    })
+
+  }
+
 
   render() {
-    console.log(hotels)
+
     return (
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Hotel Filtering</h1>
         </header>
-        <Filter hotels={this.state.hotels}/>
+        <Filter hotels={this.state.hotels} filterHotels={this.filterHotels}/>
         <HotelsComp hotels={this.state.hotels}/>
       </div>  
     );

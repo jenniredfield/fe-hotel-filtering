@@ -6,6 +6,11 @@ class Filter extends Component {
 
     //need to add select dropdown or checkbox for facilities filter
 
+    handleChange = (event) => {
+            console.log(event.target.value)
+            this.props.filterHotels(event.target.value);
+    }
+
     render () {
 
         let hotels = this.props.hotels.slice() //copy of props
@@ -18,7 +23,7 @@ class Filter extends Component {
                         facilities.push(fac)
                     }
                 });
-        });
+        });//pushes to facilities unique facilities
 
 
         return (
@@ -27,7 +32,7 @@ class Filter extends Component {
                         <ul>
                         {facilities.map((fac,i)=>{
                             return (
-                                <li><input value={fac} type="checkbox"/>{fac[0].toUpperCase() + fac.slice(1)}</li>
+                                <li><input value={fac} type="checkbox" onChange={this.handleChange}/>{fac[0].toUpperCase() + fac.slice(1)}</li>
                             )
                         })}
                         </ul>

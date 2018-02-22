@@ -10,6 +10,8 @@ header {
   text-align: center;
 }
 
+/**FILTER****/
+
 .filterWrapper {
 
   border: 1px solid lightgray;
@@ -33,4 +35,22 @@ header {
 .checkBoxDiv ul li {
   list-style-type: none;
   margin: 0 5px;
+}
+
+/***HOTELCOMP***/
+
+.hotelDiv {
+  border: 1px solid lightgray;
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.hotelDesc ul {
+  padding: 10px;
+}
+
+.hotelDesc ul li {
+  list-style-type: none;
+  margin: 10px 0;
 }
