@@ -11,7 +11,7 @@ body {
 header {
   /* border: 1px solid lightgray; */
   width: 70%;
-  margin: 20px auto;
+  margin: 10px auto;
   text-align: center;
   background: #127FAD;
   color: white;
@@ -67,6 +67,12 @@ header {
   margin: 0 5px;
 }
 
+.labelCheckBox {
+  padding: 0 3px;
+  margin: 0 10px;
+  /* border: 1px solid black; */
+}
+
 /***HOTELCOMP***/
 
 .hotelDiv {
@@ -98,7 +104,6 @@ header {
   border-radius: 5px;
   box-shadow: 0px 2px 5px gray;
 }
-
 
 
 .rating {

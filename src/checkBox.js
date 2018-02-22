@@ -8,7 +8,6 @@ class CheckBox extends Component {
         }
 
         componentWillReceiveProps(nextProps) {
-
   
             if(nextProps.filterOff) {
                 this.setState({
@@ -29,22 +28,18 @@ class CheckBox extends Component {
                     checked: false
                 })
             }
-
             this.props.handleChange(event);
         }
 
-
     render() {
-
-        console.log()
 
         const { value, fac, handleChange } = this.props;
         const { checked } = this.state;
         return (
-            <label className="">
+            <div className="labelCheckBox">
                 <input type="checkbox" value={value} name="subtype" onChange={this.handleCheck} checked={this.state.checked} />
                 <span>{fac[0].toUpperCase() + fac.slice(1)}</span>
-            </label>
+            </div>
         )
     }
 }
