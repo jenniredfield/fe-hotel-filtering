@@ -13,7 +13,7 @@ class Filter extends Component {
 
     handleSort = (event) => {
         console.log(event.target.value)
-        this.props.sortByAscOrDesc();
+        this.props.sortByAscOrDesc(event.target.value);
     }
 
     render () {
@@ -33,6 +33,7 @@ class Filter extends Component {
 
         return (
             <div className="filterWrapper">
+                <button>ALL</button>
                 <div className="checkBoxDiv">
                         <ul>
                         {facilities.map((fac,i)=>{
