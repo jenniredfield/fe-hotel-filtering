@@ -18,7 +18,6 @@ Navigate into folder
 
 ```
 cd hotel-filtering
-
 ```
 
 
@@ -26,9 +25,7 @@ cd hotel-filtering
 Install dependencies
 
 ```
-
 npm install
-
 ```
 
 
@@ -37,7 +34,6 @@ To run the project
 
 ```
 npm start
-
 ```
 
 
@@ -50,6 +46,5 @@ To run tests
 
 ```
 npm test
-
 ```
 

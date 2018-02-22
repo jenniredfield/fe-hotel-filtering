@@ -62,3 +62,63 @@ describe('<HotelsComp />', () => {
 
   });
 })
+
+function sortByAscOrDesc(value, hotels) {
+
+  if (value === 'desc') {
+      let descHotels = hotels.slice().sort((a, b) => {
+          return b.StarRating - a.StarRating;
+      })
+      return descHotels;
+  }
+
+  if (value === 'asc') {
+      let ascHotels = hotels.slice().sort((a, b) => {
+          return a.StarRating - b.StarRating;
+      });
+      return ascHotels;
+  }
+
+}
+
+describe("sortByAscOrDesc sorts an array by the StarRating", () => {
+
+  test("sortByStar returns the array of objects sorted by the star rating", () => {
+
+    const array = [{
+      "Name": "hotelone",
+      "StarRating": 1
+    },
+    {
+      "Name": "hoteltwo",
+      "StarRating": 2
+    },
+    {
+      "Name": "hotelthree",
+      "StarRating": 3
+    },
+    ];
+
+    const array2 = [
+
+      {
+        "Name": "hotelthree",
+        "StarRating": 3
+      },
+
+      {
+        "Name": "hoteltwo",
+        "StarRating": 2
+      },
+      {
+        "Name": "hotelone",
+        "StarRating": 1
+      }];
+
+
+    expect(sortByAscOrDesc('desc', array)).toEqual(array2);
+
+  })
+
+
+})
