@@ -32,6 +32,13 @@ class Filter extends Component {
                         })}
                         </ul>
                 </div>
+                <div className="sortByDiv">
+                    <span>Sort by Rating: </span>
+                    <select>
+                        <option value="desc">Descending</option>
+                        <option value="asc">Ascending</option>
+                    </select>
+                </div>
             </div>
         )
     }
