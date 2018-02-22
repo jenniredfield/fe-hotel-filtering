@@ -4,9 +4,7 @@ import React, {Component} from 'react';
 class HotelsComp extends Component {
 
     render () {
-
         let hotels = this.props.hotels.slice();
-
         return (
             <div className="hotelsWrapper">
                 { hotels.map((hotel, i) => {
@@ -33,8 +31,6 @@ class HotelsComp extends Component {
             </div>
         )
     }
-
-
 }
 
 export default HotelsComp;

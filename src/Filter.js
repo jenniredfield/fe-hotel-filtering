@@ -24,19 +24,15 @@ class Filter extends Component {
     }
 
     render () {
-
-       
-
         let facilities = [];
 
         hotels.map((hotel,i)=> {
-                hotel.Facilities.forEach(fac =>{
+             return  hotel.Facilities.forEach(fac =>{
                     if(!facilities.includes(fac)){
                         facilities.push(fac)
                     }
                 });
         });//pushes to facilities unique facilities
-
 
         return (
             <div className="filterWrapper">
@@ -45,7 +41,7 @@ class Filter extends Component {
                         <ul>
                         {facilities.map((fac,i)=>{
                             return (
-                                <li key={i}><input value={fac} type="checkbox" onChange={this.handleChange} />{fac[0].toUpperCase() + fac.slice(1)}</li>
+                                <li key={i}><input value={fac} type="checkbox" onChange={this.handleChange}/>{fac[0].toUpperCase() + fac.slice(1)}</li>
                             )
                         })}
                         </ul>
@@ -61,7 +57,6 @@ class Filter extends Component {
             </div>
         )
     }
-
 
 }
 
