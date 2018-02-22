@@ -20,3 +20,17 @@ header {
 
 
 }
+
+.checkBoxDiv {
+  border: 1px solid black;
+}
+
+.checkBoxDiv ul {
+  padding: 0;
+  display: flex;
+}
+
+.checkBoxDiv ul li {
+  list-style-type: none;
+  margin: 0 5px;
+}

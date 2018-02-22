@@ -9,7 +9,7 @@ class Filter extends Component {
     render () {
 
         let hotels = this.props.hotels.slice() //copy of props
-        console.log(hotels)
+
         let facilities = [];
 
         hotels.map((hotel,i)=> {
@@ -19,11 +19,19 @@ class Filter extends Component {
                     }
                 });
         });
-        console.log(facilities);
+
 
         return (
             <div className="filterWrapper">
-            
+                <div className="checkBoxDiv">
+                        <ul>
+                        {facilities.map((fac,i)=>{
+                            return (
+                                <li><input value={fac} type="checkbox"/>{fac[0].toUpperCase() + fac.slice(1)}</li>
+                            )
+                        })}
+                        </ul>
+                </div>
             </div>
         )
     }
