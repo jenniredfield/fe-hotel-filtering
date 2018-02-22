@@ -12,13 +12,14 @@ class Filter extends Component {
     }
 
     handleSort = (event) => {
-        console.log(event.target.value)
+      
+        if(event.target.value === "") return;
         this.props.sortByAscOrDesc(event.target.value);
     }
 
     render () {
 
-        // let hotels = this.props.hotels.slice() //copy of props
+       
 
         let facilities = [];
 
@@ -46,6 +47,7 @@ class Filter extends Component {
                 <div className="sortByDiv">
                     <span>Sort by Rating: </span>
                     <select  onChange={this.handleSort}>
+                    <option value="">Select...</option>
                         <option value="desc">Descending</option>
                         <option value="asc">Ascending</option>
                     </select>

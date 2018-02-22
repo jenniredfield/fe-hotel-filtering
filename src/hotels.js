@@ -8,7 +8,7 @@ module.exports = [
     {
         "Name": "Groove Hotel",
         "StarRating": 3,
-        "Facilities": ["car park", "gym", "wifi", "restaurant"],
+        "Facilities": ["pool", "wifi", "gym"],
         "url" : "http://res.cloudinary.com/jenniredfield/image/upload/c_scale,w_636/v1519223514/new_pic_j3vse3.jpg",
     },
     {
@@ -20,13 +20,13 @@ module.exports = [
     {
         "Name": "Lambada Hotel",
         "StarRating": 2,
-        "Facilities": ["car park" ,"wifi", "gym"],
+        "Facilities": ["car park" ,"wifi"],
         "url" : "http://res.cloudinary.com/jenniredfield/image/upload/c_scale,w_673/v1519223509/newpic2_tdivu8.jpg",
     },
     {
         "Name": "Heald Palace",
         "StarRating": 2,
-        "Facilities": ["car park" ,"wifi", "gym"],
+        "Facilities": ["car park" ,"wifi"],
         "url" : "http://res.cloudinary.com/jenniredfield/image/upload/c_scale,w_840/v1519221733/ruben-dos-santos-1938-unsplash_ptxhwy.jpg",
     },
     {
@@ -50,7 +50,7 @@ module.exports = [
     {
         "Name": "Aint that funky Hotel",
         "StarRating": 3,
-        "Facilities": ["car park", "pool", "wifi", "gym"],
+        "Facilities": ["pool", "wifi", "gym"],
         "url" : "http://res.cloudinary.com/jenniredfield/image/upload/c_scale,w_755/v1519221729/jason-briscoe-152939-unsplash_ijx4c8.jpg",
     },
     {

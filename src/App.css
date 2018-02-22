@@ -13,8 +13,10 @@ header {
   width: 70%;
   margin: 20px auto;
   text-align: center;
-  background: white;
+  background: #127FAD;
+  color: white;
   padding: 20px 0;
+  box-shadow: 0px 2px 2px lightgray;
 }
 
 /**FILTER****/
@@ -29,12 +31,24 @@ header {
   padding: 20px 0;
   background: white;
   margin-bottom: 20px;
+  box-shadow: 0px 2px 2px lightgray;
 }
 
 .filterWrapper button {
   padding: 5px 20px;
   margin: 5px;
+  background: gold;
+  border: none;
 
+}
+
+.filterWrapper button:hover {
+  background: lightgray;
+  cursor: pointer;
+}
+
+.filterWrapper button:focus {
+  outline: none;
 }
 
 .checkBoxDiv {
@@ -71,7 +85,7 @@ header {
 
 .hotelDesc ul li {
   list-style-type: none;
-  margin: 10px 0;
+  margin: 20px 0;
 }
 
 .imageDiv {
@@ -85,6 +99,14 @@ header {
   box-shadow: 0px 2px 5px gray;
 }
 
+
+
+.rating {
+  background: gold;
+  padding: 5px 10px;
+  border-radius: 100%;
+}
+
 .facs {
   font-style: italic;
   font-size: 0.8em;
@@ -92,7 +114,7 @@ header {
 
 @media only screen and (max-width: 600px) {
   body {
-      background-color: lightblue;
+      /* background-color: lightblue; */
   }
 
     
@@ -117,6 +139,9 @@ header {
     padding: 10px 0;
   }
   .imageDiv {
-    padding: 10px 0;
+    padding: 20px 0;
+  }
+  .hotelDesc ul {
+    text-align: center;
   }
 }
