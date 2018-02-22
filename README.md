@@ -7,8 +7,6 @@ To run this project locally, make sure you have node installed. You can download
 
 At the start of the project, I was not so familiar with Enzyme and testing React. Would like to add more meaningful tests in the future.
 
-Filter function could be better
-
 
 
 To copy this project, navigate to your folder of choice on terminal and type
