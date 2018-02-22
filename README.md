@@ -9,6 +9,7 @@ At the start of the project, I was not so familiar with Enzyme and testing React
 
 
 
+
 To copy this project, navigate to your folder of choice on terminal and type
 
 ```

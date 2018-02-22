@@ -6,7 +6,6 @@ import { shallow, render, mount } from 'enzyme'
 import hotels from './hotels.js'
 
 
-
 describe('app renders', () => {
   it('has a wrapping div ', () => {
 
@@ -78,7 +77,6 @@ function sortByAscOrDesc(value, hotels) {
       });
       return ascHotels;
   }
-
 }
 
 describe("sortByAscOrDesc sorts an array by the StarRating", () => {
@@ -98,9 +96,7 @@ describe("sortByAscOrDesc sorts an array by the StarRating", () => {
       "StarRating": 3
     },
     ];
-
     const array2 = [
-
       {
         "Name": "hotelthree",
         "StarRating": 3
@@ -114,11 +110,6 @@ describe("sortByAscOrDesc sorts an array by the StarRating", () => {
         "Name": "hotelone",
         "StarRating": 1
       }];
-
-
     expect(sortByAscOrDesc('desc', array)).toEqual(array2);
-
   })
-
-
 })

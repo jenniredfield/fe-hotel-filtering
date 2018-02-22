@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import hotels from './hotels'
+// import CheckBox from './checkBox';
 
 class Filter extends Component {
 
@@ -8,8 +9,12 @@ class Filter extends Component {
     }
 
     handleChange = (event) => {
-         
+
             this.props.filterHotels(event.target.value);
+
+            this.setState({
+                checked: true,
+            })
     }
 
     handleSort = (event) => {
@@ -20,6 +25,7 @@ class Filter extends Component {
 
     handleButton = () => {
 
+        document.querySelectorAll('input[type=checkbox]').forEach( el => el.checked = false );
         this.props.showAll();
     }
 
