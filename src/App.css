@@ -5,7 +5,7 @@ body, html {
 }
 
 body {
-  background: #f4f4f4;
+  background: lightblue;
 }
 
 header {
@@ -78,4 +78,36 @@ header {
   display: flex;
   align-items: center;
   padding: 2px;
+}
+
+
+@media only screen and (max-width: 600px) {
+  body {
+      background-color: lightblue;
+  }
+
+    
+  .checkBoxDiv ul {
+    display: flex;
+    flex-wrap: wrap;
+     width: 70%;
+     margin: 10px auto;
+  }
+  .checkBoxDiv ul li {
+    width: 100%;
+    text-align: left;
+    /* border: 1px solid black; */
+    padding: 0;
+    margin: 0;
+
+  }
+  .hotelDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+  }
+  .imageDiv {
+    padding: 10px 0;
+  }
 }
