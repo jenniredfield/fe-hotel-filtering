@@ -11,6 +11,11 @@ class Filter extends Component {
             this.props.filterHotels(event.target.value);
     }
 
+    handleSort = (event) => {
+        console.log(event.target.value)
+        this.props.sortByAscOrDesc();
+    }
+
     render () {
 
         let hotels = this.props.hotels.slice() //copy of props
@@ -32,14 +37,14 @@ class Filter extends Component {
                         <ul>
                         {facilities.map((fac,i)=>{
                             return (
-                                <li><input value={fac} type="checkbox" onChange={this.handleChange}/>{fac[0].toUpperCase() + fac.slice(1)}</li>
+                                <li key={i}><input value={fac} type="checkbox" onChange={this.handleChange}/>{fac[0].toUpperCase() + fac.slice(1)}</li>
                             )
                         })}
                         </ul>
                 </div>
                 <div className="sortByDiv">
                     <span>Sort by Rating: </span>
-                    <select>
+                    <select  onChange={this.handleSort}>
                         <option value="desc">Descending</option>
                         <option value="asc">Ascending</option>
                     </select>

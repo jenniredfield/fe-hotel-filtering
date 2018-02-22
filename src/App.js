@@ -22,6 +22,28 @@ class App extends Component {
 
   }
 
+  sortByAscOrDesc = (value, hotels)  => {
+
+    if (value === 'desc') {
+        let descHotels = this.state.hotels.slice().sort((a, b) => {
+            return b.StarRating - a.StarRating;
+        })
+        this.setState({
+          hotels: descHotels
+        })
+    }
+
+    if (value === 'asc') {
+        let ascHotels = this.state.hotels.slice().sort((a, b) => {
+            return a.StarRating - b.StarRating;
+        });
+        this.setState({
+          hotels: ascHotels
+        })
+    }
+
+}
+
 
   render() {
 
@@ -30,7 +52,7 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Hotel Filtering</h1>
         </header>
-        <Filter hotels={this.state.hotels} filterHotels={this.filterHotels}/>
+        <Filter hotels={this.state.hotels} filterHotels={this.filterHotels} sortByAscOrDesc={this.sortByAscOrDesc}/>
         <HotelsComp hotels={this.state.hotels}/>
       </div>  
     );

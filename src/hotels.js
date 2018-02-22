@@ -38,13 +38,13 @@ module.exports = [
     {
         "Name": "Hello World Hotel",
         "StarRating": 4,
-        "Facilities": ["car park", "pool", "wifi", "gym", "restaurant" ],
+        "Facilities": ["pool", "wifi", "gym", "restaurant" ],
         "url" : "http://res.cloudinary.com/jenniredfield/image/upload/c_scale,w_741/v1519221727/jonathan-percy-501302-unsplash_ksvuk7.jpg",
     },
     {
         "Name": "Infinite Loop Hotel",
         "StarRating": 3,
-        "Facilities": ["car park", "pool", "wifi", "gym"],
+        "Facilities": ["pool", "wifi", "gym"],
         "url" : "http://res.cloudinary.com/jenniredfield/image/upload/c_scale,w_741/v1519221727/jonathan-percy-501302-unsplash_ksvuk7.jpg",
     },
     {
