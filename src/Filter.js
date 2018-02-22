@@ -1,20 +1,18 @@
 import React, {Component} from 'react';
 import hotels from './hotels'
-// import CheckBox from './checkBox';
+import CheckBox from './checkBox';
 
 class Filter extends Component {
 
     state = {
-        checked : false,
+        filterOff : false,
     }
 
     handleChange = (event) => {
 
             this.props.filterHotels(event.target.value);
 
-            this.setState({
-                checked: true,
-            })
+        
     }
 
     handleSort = (event) => {
@@ -25,8 +23,25 @@ class Filter extends Component {
 
     handleButton = () => {
 
-        document.querySelectorAll('input[type=checkbox]').forEach( el => el.checked = false );
+        // document.querySelectorAll('input[type=checkbox]').forEach( el => el.checked = false );
+        if(!this.state.filterOff){
+
+            this.setState({
+                filterOff: true,
+            })
+
+        } else {
+            this.setState({
+                filterOff: false,
+            })
+        }
         this.props.showAll();
+    }
+
+    handleFilterOff = () => {
+        this.setState({
+            filterOff: false,
+        })
     }
 
     render () {
@@ -43,11 +58,20 @@ class Filter extends Component {
         return (
             <div className="filterWrapper">
                 <button onClick={this.handleButton}>SHOW ALL</button>
-                <div className="checkBoxDiv">
+                {/* <div className="checkBoxDiv">
                         <ul>
                         {facilities.map((fac,i)=>{
                             return (
                                 <li key={i}><input value={fac} type="checkbox" onChange={this.handleChange}/>{fac[0].toUpperCase() + fac.slice(1)}</li>
+                            )
+                        })}
+                        </ul>
+                </div> */}
+                <div className="checkBoxDiv">
+                        <ul>
+                        {facilities.map((fac,i)=>{
+                            return (
+                                <CheckBox value={fac} fac={fac} handleChange={this.handleChange} filterOff={this.state.filterOff} handleFilterOff={this.handleFilterOff}/>
                             )
                         })}
                         </ul>
