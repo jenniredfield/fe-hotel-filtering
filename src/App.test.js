@@ -2,6 +2,7 @@
 import React from 'react';
 import App from './App.js';
 import Filter from './Filter.js'
+import HotelsComp from './HotelsComp.js'
 import { shallow, render, mount } from 'enzyme'
 import hotels from './hotels.js'
 
@@ -40,5 +41,25 @@ describe('<Filter />', () => {
     expect(wrapper.props().bar).toEqual('baz');
     wrapper.setProps({ bar: 'foo' });
     expect(wrapper.props().bar).toEqual('foo');
+  });
+})
+
+describe('<HotelsComp />', () => {
+  it('allows us to set props', () => {
+
+
+    const filteredHotels = [
+      {
+        "Name": "Grand Hotel",
+        "StarRating": 5,
+        "Facilities": ["car park", "pool", "business centre"],
+      },
+    ];
+
+
+    const wrapper = mount(<HotelsComp hotels={filteredHotels}/>);
+    expect(wrapper.props().hotels).toEqual(filteredHotels);
+ 
+
   });
 })

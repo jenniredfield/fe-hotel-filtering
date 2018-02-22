@@ -20,9 +20,9 @@ class HotelsComp extends Component {
                                 <div className="hotelDesc">
                                     <ul>
                                         <li>{hotel.Name}</li>
-                                        <li>{hotel.StarRating}</li>
+                                        <li className="rating">{hotel.StarRating}</li>
                                         <li>{hotel.Facilities.map((fac,i)=>{
-                                            return (<span>{fac[0].toUpperCase() + fac.slice(1)}  </span>)
+                                            return (<span key={i} className="facs">{fac[0].toUpperCase() + fac.slice(1)}  </span>)
                                         })}</li>
                                     </ul>
                                 </div>

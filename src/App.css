@@ -5,13 +5,13 @@ body, html {
 }
 
 body {
-  background: lightblue;
+  background: #f4f4f4;
 }
 
 header {
   /* border: 1px solid lightgray; */
   width: 70%;
-  margin: 0 auto;
+  margin: 20px auto;
   text-align: center;
   background: white;
   padding: 20px 0;
@@ -28,7 +28,7 @@ header {
   min-height: 100px;
   padding: 20px 0;
   background: white;
-
+  margin-bottom: 20px;
 }
 
 .filterWrapper button {
@@ -77,9 +77,18 @@ header {
 .imageDiv {
   display: flex;
   align-items: center;
-  padding: 2px;
+  padding: 25px;
 }
 
+.imageDiv > img {
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px gray;
+}
+
+.facs {
+  font-style: italic;
+  font-size: 0.8em;
+}
 
 @media only screen and (max-width: 600px) {
   body {
