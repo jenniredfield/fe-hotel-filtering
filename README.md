@@ -47,27 +47,6 @@ To run tests
 npm test
 ```
 
-Note to self - to get Enzyme  working:
-
-```
-
-npm install jest
-npm install enzyme
-npm install enzyme-adapter-react-16
-npm install jest-cli  -> this fixed a problem
-
-Have a src/setupTest.js  file with
-
-import Enzyme, { shallow, render, mount } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
-
-Enzyme.configure({ adapter: new Adapter() });
-
-console.error = message => {
-throw new Error(message);
-};
-
-```
 
 ### Things to improve
 
