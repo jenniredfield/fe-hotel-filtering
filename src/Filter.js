@@ -71,7 +71,7 @@ class Filter extends Component {
                         <ul>
                         {facilities.map((fac,i)=>{
                             return (
-                                <CheckBox value={fac} fac={fac} handleChange={this.handleChange} filterOff={this.state.filterOff} handleFilterOff={this.handleFilterOff}/>
+                                <CheckBox value={fac} fac={fac} handleChange={this.handleChange} filterOff={this.state.filterOff} handleFilterOff={this.handleFilterOff} key={i}/>
                             )
                         })}
                         </ul>
