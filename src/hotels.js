@@ -37,7 +37,7 @@ module.exports = [
     },
     {
         "Name": "Hello World Hotel",
-        "StarRating": 4,
+        "StarRating": 1,
         "Facilities": ["pool", "wifi", "gym", "restaurant" ],
         "url" : "http://res.cloudinary.com/jenniredfield/image/upload/c_scale,w_606/v1519221732/nathaniel-watson-348574-unsplash_i1gx4k.jpg",
     },
@@ -55,7 +55,7 @@ module.exports = [
     },
     {
         "Name": "Northcoders Hotel",
-        "StarRating": 1,
+        "StarRating": 5,
         "Facilities": ["car park"],
         "url" : "http://res.cloudinary.com/jenniredfield/image/upload/c_scale,w_667/v1519221727/joao-branco-201904-unsplash_xqxj5y.jpg",
     }
