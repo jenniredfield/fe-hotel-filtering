@@ -17,18 +17,14 @@ class CheckBox extends Component {
             }
         }   
     
-        handleCheck = (event) => {
-        
-            if(!this.state.checked) {
-                this.setState({
-                    checked: true
-                })
-            } else {
-                this.setState({
-                    checked: false
-                })
-            }
-            this.props.handleChange(event);
+        handleCheck = () => {
+
+            this.setState({
+                checked: !this.state.checked,
+            })
+
+            this.props.handleChange(this.props.fac);
+
         }
 
     render() {
@@ -36,9 +32,9 @@ class CheckBox extends Component {
         const { value, fac, handleChange } = this.props;
         const { checked } = this.state;
         return (
-            <div className="labelCheckBox">
-                <input type="checkbox" value={value} name="subtype" onChange={this.handleCheck} checked={this.state.checked} />
-                <span>{fac[0].toUpperCase() + fac.slice(1)}</span>
+            <div className="labelCheckBox" >
+                <input type="checkbox" className="regular-checkbox" value={value} name="subtype" onChange={this.handleCheck} checked={this.state.checked} id={value}/><label for={value}></label>
+                <span onClick={this.handleCheck} > {fac[0].toUpperCase() + fac.slice(1)}</span>
             </div>
         )
     }

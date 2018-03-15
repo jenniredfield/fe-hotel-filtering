@@ -2,51 +2,52 @@ import React, { Component } from 'react';
 import hotels from './hotels';
 import Filter from './Filter.js';
 import HotelsComp from './HotelsComp.js';
+import myFilter from './helpers/functions.js'
 import './App.css';
 
 class App extends Component {
 
   state = {
-    hotels : hotels,
+    hotels,
+    filter: [],
+    sort: 0,
   }
 
   filterHotels = (facility) => {
+  
+  let hotelFilter = [];
 
-    let filteredHotels = hotels.filter(hotel => {
-        return hotel.Facilities.includes(facility);
+  if(!this.state.filter.includes(facility)){
+    hotelFilter = [...this.state.filter, facility];
+  } else {
+    hotelFilter = this.state.filter.filter(fac => {
+      return fac !== facility;
     })
+  }
+
 
     this.setState({
-        hotels: filteredHotels
+        filter : hotelFilter
     })
 
   }
 
-  sortByAscOrDesc = (value, hotels)  => {
+  
+  sortByAscOrDesc = (value) => {
 
-    if (value === 'desc') {
-        let descHotels = this.state.hotels.slice().sort((a, b) => {
-            return b.StarRating - a.StarRating;
-        })
-        this.setState({
-          hotels: descHotels
-        })
-    }
+    console.log(value)
+    this.setState({
+      sort: +value,
+    })
 
-    if (value === 'asc') {
-        let ascHotels = this.state.hotels.slice().sort((a, b) => {
-            return a.StarRating - b.StarRating;
-        });
-        this.setState({
-          hotels: ascHotels
-        })
-    }
-}
+  }
+  
+  
 
   showAll = () => {
 
     this.setState({
-      hotels : hotels,
+      filter : [],
     })
   }
 
@@ -57,9 +58,19 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Hotel Filtering</h1>
         </header>
-        <Filter hotels={this.state.hotels} filterHotels={this.filterHotels} sortByAscOrDesc={this.sortByAscOrDesc} showAll={this.showAll}/>
-        <HotelsComp hotels={this.state.hotels}/>
-      </div>  
+           <div className="wrapper">
+            <Filter hotels={this.state.hotels} filterHotels={this.filterHotels} sortByAscOrDesc={this.sortByAscOrDesc} showAll={this.showAll}/>
+            <div className="hotelsWrapper">
+            {this.state.hotels
+            .filter(hotel => myFilter(this.state.filter, hotel))
+            .sort((a,b) => this.state.sort * (a.StarRating - b.StarRating))
+            .map((hotel, i)=>{
+              return <HotelsComp hotel={hotel} key={i}/>
+            })
+            }
+          </div>
+        </div>  
+      </div>
     );
   }
 }

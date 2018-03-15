@@ -4,14 +4,9 @@ import React, {Component} from 'react';
 class HotelsComp extends Component {
 
     render () {
-        let hotels = this.props.hotels.slice();
+        let hotel = this.props.hotel;
         return (
-            <div className="hotelsWrapper">
-                { hotels.map((hotel, i) => {
-
-                    return (
-
-                        <div className="hotelDiv" key={i}>
+                        <div className="hotelDiv">
                                 <div className="imageDiv">
                                     <img src={hotel.url} alt="hotel" style={{width: "200px"}}/>
                                 </div>
@@ -26,10 +21,6 @@ class HotelsComp extends Component {
                                 </div>
                         </div>
                     )
-                })}
-            
-            </div>
-        )
     }
 }
 

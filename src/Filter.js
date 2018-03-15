@@ -8,11 +8,10 @@ class Filter extends Component {
         filterOff : false,
     }
 
-    handleChange = (event) => {
-
-            this.props.filterHotels(event.target.value);
-
-        
+    handleChange = (value) => {
+       
+        this.props.filterHotels(value)
+                   
     }
 
     handleSort = (event) => {
@@ -23,16 +22,10 @@ class Filter extends Component {
 
     handleButton = () => {
 
-        // document.querySelectorAll('input[type=checkbox]').forEach( el => el.checked = false );
         if(!this.state.filterOff){
 
             this.setState({
-                filterOff: true,
-            })
-
-        } else {
-            this.setState({
-                filterOff: false,
+                filterOff: !this.state.filterOff,
             })
         }
         this.props.showAll();
@@ -58,15 +51,6 @@ class Filter extends Component {
         return (
             <div className="filterWrapper">
                 <button onClick={this.handleButton}>SHOW ALL</button>
-                {/* <div className="checkBoxDiv">
-                        <ul>
-                        {facilities.map((fac,i)=>{
-                            return (
-                                <li key={i}><input value={fac} type="checkbox" onChange={this.handleChange}/>{fac[0].toUpperCase() + fac.slice(1)}</li>
-                            )
-                        })}
-                        </ul>
-                </div> */}
                 <div className="checkBoxDiv">
                         <ul>
                         {facilities.map((fac,i)=>{
@@ -79,9 +63,9 @@ class Filter extends Component {
                 <div className="sortByDiv">
                     <span>Sort by Rating: </span>
                     <select  onChange={this.handleSort}>
-                    <option value="">Select...</option>
-                        <option value="desc">Descending</option>
-                        <option value="asc">Ascending</option>
+                        <option value="0">Select...</option>
+                        <option value="1">Descending</option>
+                        <option value="-1">Ascending</option>
                     </select>
                 </div>
             </div>

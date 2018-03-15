@@ -56,6 +56,8 @@ describe('<HotelsComp />', () => {
 
 
     const wrapper = mount(<HotelsComp hotels={filteredHotels}/>);
+    const hotelDiv = wrapper.find('.hotelDiv');
+    expect(hotelDiv.length).toBe(1);
     expect(wrapper.props().hotels).toEqual(filteredHotels);
  
 
