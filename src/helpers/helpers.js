@@ -1,8 +1,7 @@
-
-function myFilter(filters, hotel) {
-
-    
-    if(!filters) return true;
+export function myFilter(filters, hotel) {
+    if(!filters) {
+      return true;
+    }
 
     let counter = 0;
    
@@ -17,7 +16,4 @@ function myFilter(filters, hotel) {
     } else {
       return false;
     }
-  
   }
-  
-  module.exports = myFilter;

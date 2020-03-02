@@ -1,4 +1,4 @@
-module.exports = [
+export const hotels = [
     {
         "Name": "Grand Hotel",
         "StarRating": 5,
